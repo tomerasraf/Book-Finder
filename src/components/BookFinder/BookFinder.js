@@ -1,5 +1,5 @@
 import React from 'react'
-import './BookFinder.css'
+import '../../style/style.css'
 import searchIcon from '../../img/search.png'
 
 const BookFinder = () => {
