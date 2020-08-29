@@ -1,12 +1,13 @@
 import React from 'react'
-import FindBook from './components/BookFinder/BookFinder'
-import Book from './components/Book.js/Book'
+import StateContextP from './context/StateContextP'
+import BookFinder from './components/BookFinder'
 
 const App = () => {
   return (
     <div>
-      <FindBook />
-      <Book />
+      <StateContextP>
+        <BookFinder />
+      </StateContextP>
     </div>
   )
 }

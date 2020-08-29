@@ -14,6 +14,10 @@ body {
     background-color: #222831;
 }
 
+/*******************
+BOOKFINDER Component
+*******************/
+
 .bookfinder {
     margin-top: 5rem;
 }
@@ -23,11 +27,11 @@ body {
     color: #00adb5;
     text-align: center;
     padding: 20px;
-    animation: title 1s ease-in-out;
+    animation: title .5s ease-in-out;
 }
 
 .title h1 {
-   text-shadow: 4px 2px #393e46;
+    text-shadow: 4px 2px #393e46;
 }
 
 .search {
@@ -37,7 +41,7 @@ body {
     padding: 10px;
     width: 20rem;
     border-radius: 1rem;
-    animation: search 1s ease-in-out;
+    animation: search .5s ease-in-out;
 }
 
 .search input {
@@ -61,26 +65,74 @@ body {
     max-height: 15px;
 }
 
+/*****************
+BOOK Component
+******************/
+
+.book-display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.book-content {
+    margin: 3rem 3rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 10px solid #393e46;
+    background-color: #393e46;
+    width: 20rem;
+    box-shadow: 1px 1px 17px 12px#eeeeee;
+    animation: book .5s ease-in-out;
+}
+
+.book-content span {
+    color: #00adb5;
+}
+
+.book-content h4 {
+    font-weight: bold;
+    color: #eeeeee;
+}
+
+.book-content p {
+    color: #eeeeee;
+}
+
+/****************
+Animations
+*****************/
+
 @keyframes title {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(8rem);
     }
-
-    100%{
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
 @keyframes search {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(-8rem);
     }
-
-    100%{
+    100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes book {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
